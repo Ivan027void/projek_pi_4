@@ -1,0 +1,14 @@
+
+Jurnal yang Saya tinjau, berjudul "Information systems in nurses' work: Technical rationality versus an ethic of care" oleh Minna Salminen-Karlsson dan Diane Golay, merupakan karya yang sangat relevan dan memprovokasi pemikiran. Meskipun jurnal ini berasal dari Swedia, isu yang dibahas memiliki dampak yang signifikan dalam konteks perawatan kesehatan di Indonesia.
+ 
+ 
+Di Indonesia, sektor perawatan kesehatan menghadapi tantangan unik. Dengan populasi yang besar dan beragam serta infrastruktur kesehatan yang beragam, sistem kesehatan Indonesia sering menghadapi tekanan besar. 
+     
+Dalam konteks ini, penggunaan sistem informasi kesehatan (HIS) menjadi semakin penting untuk meningkatkan efisiensi, mengelola data pasien, dan meningkatkan kualitas perawatan kesehatan. Namun, sebagian besar perawat di Indonesia menghadapi masalah serupa dengan rekan-rekan mereka di seluruh dunia, yaitu bagaimana HIS mempengaruhi etika perawatan mereka.
+ 
+Tantangan di Indonesia
+ 
+           
+Indonesia memiliki sistem perawatan kesehatan yang beragam, mulai dari rumah sakit modern di kota besar hingga puskesmas di desa terpencil. Hal ini menciptakan tantangan khusus dalam mengimplementasikan HIS yang sesuai dengan situasi yang beragam ini. Meskipun HIS dapat menjadi alat yang sangat berguna untuk meningkatkan efisiensi dan mengelola catatan medis, ada resiko besar bahwa HIS, jika tidak disesuaikan dengan kebutuhan lokal dan etika perawatan, dapat menghambat kemampuan perawat untuk memberikan perawatan holistik yang sangat diperlukan dalam masyarakat yang beragam ini.
+ 
+Temuan dalam Konteks Indonesia

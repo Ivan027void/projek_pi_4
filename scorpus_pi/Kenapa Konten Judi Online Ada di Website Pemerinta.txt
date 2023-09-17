@@ -1,0 +1,14 @@
+
+Akhir-akhir ini lagi rame banyak situs pemerintah sampai website perguruan tinggi diretas dan menampilkan konten judi online.Bagaimana cara hacker melakukannya dan apa keuntungan mereka dari aksi ini?
+Sebelum kita bahas gimana hacker bisa masuk dan mengutak-atik website-website ini, kita harus tahu dulu website itu sebenarnya dibangun seperti apa.Disini aku berusaha jelaskan dengan bahasa yg paling sederhana, so bear with me..
+ 
+Sebuah website dibuat dengan serangkaian perintah-perintah yang ditulis oleh seorang programmer untuk kemudian diterjemahkan komputer dan ditampilkan ke layar.
+     
+Dari yang sederhana seperti:"gunakan logo memakai file logo-manado.png""pakai warna merah untuk background halaman home"
+sampai perintah kompleks seperti:"saat user mengirim file yang bukan sebuah gambar, tolak dan berikan pesan error"
+Mungkin mudah membayangkan menulis perintah-perintah ini sebagai manusia, tapi bagi sebuah komputer, perintah-perintah ini harus ditulis dengan sangat spesifik dan teliti apalagi ketika melibatkan sesuatu yang sensitif.
+Nah disinilah titik yang dimanfaatkan hacker untuk menembus website. Mencari suatu celah dalam perintah yang ditulis programmer.
+           
+Bagaimana? Mari kita buat sebuah simulasi.
+Bayangkan sebuah website pemerintah dimana masyarakat bisa mengakses layanan pengurusan dokumen kependudukan dengan syarat melakukan pendaftaran melalui formulir yang disediakan.
+Salah satu kolom di formulir ini adalah kolom untuk mengirim file foto KTP.
