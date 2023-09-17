@@ -1,0 +1,17 @@
+
+Di era modern seperti saat ini, kemajuan teknologi telah mendorong berbagai inovasi di berbagai bidang kehidupan seperti kedokteran. Salah satu terobosan teknologi terbaru yang mampu memberikan kemudahan di bidang ini yaitu E3D. Teknologi yang dikembangkan oleh perusahaan teknologi asal Yogyakarta, Widya Imersif Teknologi, mampu melakukan pencetakan organ manusia tiruan dalam bentuk 3 dimensi (3D). 
+Kehadiran teknologi E3D di bidang kedokteran juga menjadi cara baru dalam memahami dan memanfaatkan data medis yang diperoleh dari proses pemeriksaan medis seperti MRI. Teknologi E3D bekerja dengan mengubah file Digital Imaging and Communication in Medicine (DICOM) hasil pemeriksaan MRI menjadi model 3D yang kemudian dapat dicetak dalam bentuk yang nyata sesuai dengan bentuk sebenarnya. 
+ 
+Dalam proses menciptakan organ tiruan, Teknologi E3D akan mengambil file DICOM yang berisi data medis yang sangat detail tentang organ manusia. Selanjutnya, software E3D akan mengubah data tersebut menjadi model 3D yang akurat. Tidak hanya organ manusia secara normal seperti otak, jantung, hati, ginjal serta tulang, organ dengan kasus tertentu seperti kanker, tumor bahkan fraktur pun dapat dicetak dalam bentuk yang sangat realistis. 
+     
+
+
+
+Proses pengolahan file DICOM hasil pemeriksaan MRI untuk diubah menjadi file 3D sebelum dilakukan pencetakan. Sumber : Widya Imersif
+
+Saat ini, pengembangan teknologi E3D memiliki potensi yang besar dalam dunia medis. Salah satu implementasi yang paling menonjol yaitu kemampuannya untuk digunakan sebagai alat simulasi sebelum tindakan operasi yang sebenarnya dilakukan. Dengan adanya teknologi ini, dokter dapat melakukan pencetakan organ pasien dalam bentuk seperti keadaan sesungguhnya, kemudian melalui organ replika tersebut dokter dapat melakukan simulasi tindakan hingga didapatkan metode yang tepat sebelum melanjutkan pada tindakan yang sebenarnya. Adanya simulasi ini tentunya akan mengurangi resiko dan memungkinkan dokter membuat perencanaan operasi dengan lebih baik. 
+“Teknologi E3D ini kami kembangkan untuk membantu tim medis terutama dalam mempersiapkan tindakan operasi. Dengan melakukan pencetakan organ pasien diharapkan dapat membantu proses simulasi sebelum tindakan serta dapat memperlancar proses operasi yang dilakukan,” ungkap Aryo Saputro selaku produk manager E3D Widya Imersif Teknologi.
+Tidak hanya diaplikasikan dalam praktik medis, Teknologi E3D juga mampu mendorong perubahan dalam pendidikan kedokteran. Bagaimana tidak, dengan kemampuan pencetakan organ manusia dengan tingkat kemiripan yang tinggi akan mempermudah mahasiswa kedokteran dalam mempelajari anatomi manusia bahkan jika ingin mempelajari kasus tertentu. 
+           
+Di samping itu, kehadiran E3D juga dapat membantu mahasiswa dalam melakukan latihan serta simulasi tindakan dengan lebih realistis. Dengan menggunakan data pemindaian medis tertentu, organ tiruan dapat dicetak sesuai dengan karakteristik individu. Ini dapat memberikan gambaran dengan lebih akurat kepada mahasiswa mengenai variasi anatomi yang akan mereka temui dalam praktik secara nyata nanti. 
+Kehadiran teknologi E3D menjadi terobosan besar dalam dunia pendidikan maupun praktik kedokteran. Teknologi ini telah merubah cara pandang kita dalam memahami dan mempelajari organ manusia. Adanya inovasi E3D juga akan mereduksi resiko yang terjadi dalam tindakan medis dengan meningkatkan kesiapan sehingga penerapannya sangat penting untuk dilakukan. 
