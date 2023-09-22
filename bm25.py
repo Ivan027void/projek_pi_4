@@ -1,6 +1,6 @@
 import string
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
+import numpy as np
+from bm25 import BM25Okapi
 import nltk
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 import os
@@ -31,14 +31,16 @@ def read_documents(directory):
                 documents.append(document_text)
     return documents
 
-# Fungsi untuk menghitung skor TF-IDF
-def calculate_tfidf(documents):
-    tfidf_vectorizer = TfidfVectorizer(preprocessor=preprocess_text)
-    tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
-    return tfidf_vectorizer, tfidf_matrix
+# Fungsi untuk menghitung skor BM25
+def calculate_bm25(documents):
+    # Melakukan preprocessing dan tokenisasi pada dokumen
+    tokenized_corpus = [nltk.word_tokenize(preprocess_text(document)) for document in documents]
+    # Membuat objek BM25 dengan corpus yang telah ditokenisasi
+    bm25 = BM25Okapi(tokenized_corpus)
+    return bm25
 
 # Fungsi untuk mencari indeks kata dalam dokumen
-def find_word_index(word, documents, tfidf_vectorizer):
+def find_word_index(word, documents):
     # Membuat sebuah list kosong untuk menyimpan hasil pencarian
     word_index = []
     # Menggunakan nltk untuk melakukan tokenisasi kata pada setiap dokumen
@@ -67,24 +69,23 @@ def display_search_results(sorted_documents, word_index):
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 documents = read_documents(dir)
 
-# Menghitung skor TF-IDF
-tfidf_vectorizer, tfidf_matrix = calculate_tfidf(documents)
+# Menghitung skor BM25
+bm25 = calculate_bm25(documents)
 
 # Mengambil input dari pengguna
 user_query = input("Masukkan term atau kata yang ingin Anda cari: ")
 
-# Membersihkan dan menghitung TF-IDF untuk query pengguna
-query_vector = tfidf_vectorizer.transform([preprocess_text(user_query)])
+# Membersihkan dan menghitung skor BM25 untuk query pengguna
+query_vector = nltk.word_tokenize(preprocess_text(user_query))
+document_scores = bm25.get_scores(query_vector)
 
-# Menghitung kesamaan kosinus antara query dan dokumen
-cosine_similarities = linear_kernel(query_vector, tfidf_matrix).flatten()
-
-# Mendapatkan indeks dokumen yang diurutkan berdasarkan kesamaan kosinus tertinggi
-document_scores = [(i, score) for i, score in enumerate(cosine_similarities)]
+# Mendapatkan indeks dokumen yang diurutkan berdasarkan skor BM25 tertinggi
+document_scores = [(i, score) for i, score in enumerate(document_scores)]
 sorted_documents = sorted(document_scores, key=lambda x: x[1], reverse=True)
 
 # Mencari indeks kata dalam dokumen
-word_index = find_word_index(user_query, documents, tfidf_vectorizer)
+word_index = find_word_index(user_query, documents)
 
 # Menampilkan hasil pencarian
 display_search_results(sorted_documents, documents, word_index)
+
