@@ -5,7 +5,7 @@ import nltk
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 import os
 
-nltk.download('punkt')
+# nltk.download('punkt')
 
 # Inisialisasi StopWordRemover dari Sastrawi
 stopword_factory = StopWordRemoverFactory()
