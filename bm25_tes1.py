@@ -1,6 +1,6 @@
 import string
 import numpy as np
-from bm25 import BM25Okapi
+from rank_bm25 import BM25Okapi
 import nltk
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 import os
