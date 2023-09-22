@@ -51,7 +51,7 @@ def find_word_index(word, documents, tfidf_vectorizer):
     return word_index
 
 # Fungsi untuk menampilkan hasil pencarian
-def display_search_results(sorted_documents, word_index):
+def display_search_results(sorted_documents,documents, word_index):
     # Menampilkan judul hasil pencarian
     print(f"Hasil pencarian untuk '{user_query}':")
     # Menampilkan dokumen yang diurutkan berdasarkan peringkat
