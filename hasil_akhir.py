@@ -62,22 +62,22 @@ tokenized_documents = [nltk.word_tokenize(
 bm25 = BM25Okapi(tokenized_documents)
 bm25_scores = bm25.get_scores(tokenized_query)
 
-def find_word_positions(features, tfidf_matrix):
-    # Create an empty dictionary to store the word positions
-    word_positions = {}
-    # Loop through each feature (word)
-    for i, word in enumerate(features):
-        # Loop through each document (row) in the tfidf matrix
-        for j, row in enumerate(tfidf_matrix):
-            # Check if the word has a non-zero tf-idf value in the document
-            if row[i] > 0:
-                # Add the word and its position to the dictionary
-                word_positions[word] = word_positions.get(word, []) + [j]
-    # Return the dictionary of word positions
-    return word_positions
+# def find_word_positions(features, tfidf_matrix):
+#     # Create an empty dictionary to store the word positions
+#     word_positions = {}
+#     # Loop through each feature (word)
+#     for i, word in enumerate(features):
+#         # Loop through each document (row) in the tfidf matrix
+#         for j, row in enumerate(tfidf_matrix):
+#             # Check if the word has a non-zero tf-idf value in the document
+#             if row[i] > 0:
+#                 # Add the word and its position to the dictionary
+#                 word_positions[word] = word_positions.get(word, []) + [j]
+#     # Return the dictionary of word positions
+#     return word_positions
 
-# Call the function and store the result in a variable
-word_positions = find_word_positions(features, tfidf_matrix.toarray())
+# # Call the function and store the result in a variable
+# word_positions = find_word_positions(features, tfidf_matrix)
 
 n = int(input("Masukkan jumlah dokumen yang ingin ditampilkan: "))
 
@@ -94,18 +94,18 @@ for i in cosine_indices:
     print(f"Dokumen {i+1}:")
     print(f"Skor cosine similarity: {cosine_scores[0][i]}")
     # Find the positions of the query words in the document
-    positions = {}
-    for word in tokenized_query:
-        # Check if the word is in the word positions dictionary
-        if word in word_positions:
-            # Check if the document index is in the word positions list
-            if i in word_positions[word]:
-                # Add the word and its position to a dictionary
-                positions[word] = positions.get(word, []) + [i]
-    # Sort the positions by value
-    positions = {k: sorted(v) for k, v in positions.items()}
-    # Print the positions
-    print(f"Posisi kata: {positions}")
+    # positions = {}
+    # for word in tokenized_query:
+    #     # Check if the word is in the word positions dictionary
+    #     if word in word_positions:
+    #         # Check if the document index is in the word positions list
+    #         if i in word_positions[word]:
+    #             # Add the word and its position to a dictionary
+    #             positions[word] = positions.get(word, []) + [i]
+    # # Sort the positions by value
+    # positions = {k: sorted(v) for k, v in positions.items()}
+    # # Print the positions
+    # print(f"Posisi kata: {positions}")
     # Add asterisks around the query words in the document
     highlighted_document = re.sub(
         r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
@@ -122,18 +122,18 @@ for i in bm25_indices:
     print(f"Dokumen {i+1}:")
     print(f"Skor BM25: {bm25_scores[i]}")
     # Find the positions of the query words in the document
-    positions = {}
-    for word in tokenized_query:
-        # Use binary search to find the index of the word
-        index = bisect.bisect_left(tokenized_documents[i], word)
-        # Check if the word is in the document
-        if index < len(tokenized_documents[i]) and tokenized_documents[i][index] == word:
-            # Add the word and its position to a dictionary
-            positions[word] = positions.get(word, []) + [index]
-    # Sort the positions by value
-    positions = {k: sorted(v) for k, v in positions.items()}
-    # Print the positions
-    print(f"Posisi kata: {positions}")
+    # positions = {}
+    # for word in tokenized_query:
+    #     # Use binary search to find the index of the word
+    #     index = bisect.bisect_left(tokenized_documents[i], word)
+    #     # Check if the word is in the document
+    #     if index < len(tokenized_documents[i]) and tokenized_documents[i][index] == word:
+    #         # Add the word and its position to a dictionary
+    #         positions[word] = positions.get(word, []) + [index]
+    # # Sort the positions by value
+    # positions = {k: sorted(v) for k, v in positions.items()}
+    # # Print the positions
+    # print(f"Posisi kata: {positions}")
     # Add asterisks around the query words in the document
     highlighted_document = re.sub(
         r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
