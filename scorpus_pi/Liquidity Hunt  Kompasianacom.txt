@@ -1,8 +1,0 @@
-Mengenai Liquidity dan bagaimana smart money memanfaatkan bias trader/investor untuk memperoleh keuntungan. Retail trader/investor memiliki kecenderungan untuk trading di area support/demand area atau resistance/supply area dan memasang stop loss mereka beberapa persen di atas atau dibawah dari area tersebut. Hal tersebut sangat sering dimanfaatkan oleh whale/smart money untuk meliquidasi stop loss dari para retail sebelum harga menuju target yang ditentukan.
-2 hal yang biasanya sering terjadi:
-1) Trader buy/long di support yang tiba tiba secara agresif tertembus ke bawah sehingga miliaran dollar longs terlikuidasi dan kemudian beberapa jam kemudian harga melakukan V shape dan terbang menerjang support yang turned into resistance. (Sama kaya chart BTC 12 september, disitu miliaran dollar long BTC ke likuidasi sebelum terbang ke 27k)
- 
-2) Trader short/sell di resistance seperti 26.500 beberapa saat kemaren sebelum diangkat ke 27.400 dan kemudian dibanting ke bawah lagi untuk melikuidasi para shorter dan menjebak late longers.
-     
-Only using Technical Research is not enough in this game. You need to study quant too.
-           

@@ -1,14 +1,14 @@
-Nama: Monika Annastasya Tulenan
-Nim: 22105022
-Kelas: 3C
+nama  monika annastasya tulenan
+nim  22105022
+kelas  3c
  
-Mata Kuliah: Teknologi Pendidikan
+mata kuliah  teknologi pendidikan
      
-Dosen Pengampuh: Juliana M. Sumilat, S.Pd, M.Pd
-1. TEKNOLOGI PERKEMBANGAN ZAMAN
-SEJARAH DAN PERKEMBANGAN KOMPUTER DARI GENERASI KE GENERASI
-Komputer Generasi Pertama (1940-1956)
+dosen pengampuh  juliana m  sumilat  s pd  m pd
+1  teknologi perkembangan zaman
+sejarah dan perkembangan komputer dari generasi ke generasi
+komputer generasi pertama  1940 1956 
            
-Perangkat  yang pertama ini ternyata dikembangkan untuk desain peluru kendali dan pesawat. Penggagas komputer generasi pertama adalah Konrad Zuse, seorang insinyur dari Jerman. Komputer ini memanfaatkan tabung hampa udara untuk sirkuit dan drum magnetik sebagai memori. Komputer generasi pertama ini dikenal sangat mahal dan besar, loh! Besarnya hingga bisa menempati seluruh ruangan. Contohnya ENIAC, komputer pertama di dunia yang memiliki tinggi 2,4 meter, panjang 30 meter, dan berat 30 ton. Komputer generasi ini juga mengandalkan machine language, yakni level bahasa pemrograman paling rendah yang dimengerti komputer. Bahasa pemrograman ini hanya dapat menyelesaikan satu perhitungan setiap waktu, dan untuk menyetel perhitungan baru membutuhkan berhari-hari bahkan berminggu-minggu.
-Komputer Generasi Ke Dua (1956-1963)
-      Di temukannya transistor pada masa ini mengubah tampilan komputer generasi pertama. Perkembangan generasi kedua menjadi awal perkembangan komputer dengan digantinya tabung hampa dengan transistor. Transistor memungkinkan komputer jadi lebih kecil, murah, cepat, dan hemat energi. Selain itu, pada generasi kedua memori inti magnetik juga mengalami perkembangan. Secara umum, komputer generasi ini sudah menggunakan bahasa pemrograman tingkat tinggi, kapasitas memori sudah cukup besar, lebih hemat listrik, dan proses operasinya lebih cepat.
+perangkat  yang pertama ini ternyata dikembangkan untuk desain peluru kendali dan pesawat  penggagas komputer generasi pertama adalah konrad zuse  seorang insinyur dari jerman  komputer ini memanfaatkan tabung hampa udara untuk sirkuit dan drum magnetik sebagai memori  komputer generasi pertama ini dikenal sangat mahal dan besar  loh  besarnya hingga bisa menempati seluruh ruangan  contohnya eniac  komputer pertama di dunia yang memiliki tinggi 2 4 meter  panjang 30 meter  dan berat 30 ton  komputer generasi ini juga mengandalkan machine language  yakni level bahasa pemrograman paling rendah yang dimengerti komputer  bahasa pemrograman ini hanya dapat menyelesaikan satu perhitungan setiap waktu  dan untuk menyetel perhitungan baru membutuhkan berhari hari bahkan berminggu minggu 
+komputer generasi ke dua  1956 1963 
+      di temukannya transistor pada masa ini mengubah tampilan komputer generasi pertama  perkembangan generasi kedua menjadi awal perkembangan komputer dengan digantinya tabung hampa dengan transistor  transistor memungkinkan komputer jadi lebih kecil  murah  cepat  dan hemat energi  selain itu  pada generasi kedua memori inti magnetik juga mengalami perkembangan  secara umum  komputer generasi ini sudah menggunakan bahasa pemrograman tingkat tinggi  kapasitas memori sudah cukup besar  lebih hemat listrik  dan proses operasinya lebih cepat 

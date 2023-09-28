@@ -1,14 +1,14 @@
-ARTIKEL
-Nama: Aprilio Javier Rovin Seran
-NIM: 2330203020157
+artikel
+nama  aprilio javier rovin seran
+nim  2330203020157
  
-Dosen Pengampu: Puput Iswandyah Raysharie, SE., ME.
+dosen pengampu  puput iswandyah raysharie  se   me 
      
-TRANSFORMASI EKONOMI GLOBAL: KETERKAITAN ANTARA GDP DAN GNP DALAM ERA GLOBALISASI
-Abstrak
-Dalam era globalisasi yang semakin berkembang pesat, analisis mengenai hubungan antara Gross Domestic Product (GDP) dan Gross National Product (GNP) menjadi semakin penting dalam memahami kesejahteraan ekonomi suatu negara. Penelitian ini, yang bersumber dari penulis Indonesia, menggunakan metode analisis data sekunder untuk menggali keterkaitan antara kedua indikator tersebut dalam konteks globalisasi. Hasil temuan menunjukkan bahwa hubungan antara GDP dan GNP menjadi lebih kompleks dan bervariasi tergantung pada faktor-faktor ekonomi, kebijakan, dan perkembangan global yang berubah-ubah. Negara-negara dengan pertumbuhan ekonomi yang tinggi cenderung memiliki perbedaan yang lebih kecil antara GDP dan GNP, sementara negara-negara dengan ketergantungan ekonomi pada perdagangan internasional dan aliran modal cenderung memiliki perbedaan yang lebih besar. Kesimpulannya, pendekatan analisis yang lebih holistik dan berorientasi pada konteks sangat penting dalam mengukur kesejahteraan ekonomi suatu negara dalam era globalisasi ini.
-Kata Kunci: Globalisasi, GDP, GNP, Kesejahteraan ekonomi, Hubungan antara GDP dan GNP
+transformasi ekonomi global  keterkaitan antara gdp dan gnp dalam era globalisasi
+abstrak
+dalam era globalisasi yang semakin berkembang pesat  analisis mengenai hubungan antara gross domestic product  gdp  dan gross national product  gnp  menjadi semakin penting dalam memahami kesejahteraan ekonomi suatu negara  penelitian ini  yang bersumber dari penulis indonesia  menggunakan metode analisis data sekunder untuk menggali keterkaitan antara kedua indikator tersebut dalam konteks globalisasi  hasil temuan menunjukkan bahwa hubungan antara gdp dan gnp menjadi lebih kompleks dan bervariasi tergantung pada faktor faktor ekonomi  kebijakan  dan perkembangan global yang berubah ubah  negara negara dengan pertumbuhan ekonomi yang tinggi cenderung memiliki perbedaan yang lebih kecil antara gdp dan gnp  sementara negara negara dengan ketergantungan ekonomi pada perdagangan internasional dan aliran modal cenderung memiliki perbedaan yang lebih besar  kesimpulannya  pendekatan analisis yang lebih holistik dan berorientasi pada konteks sangat penting dalam mengukur kesejahteraan ekonomi suatu negara dalam era globalisasi ini 
+kata kunci  globalisasi  gdp  gnp  kesejahteraan ekonomi  hubungan antara gdp dan gnp
            
-Pendahuluan
-Dalam era globalisasi yang semakin berkembang pesat, transformasi ekonomi global telah menjadi fokus utama perdebatan dan analisis. Salah satu aspek yang menjadi perhatian utama dalam konteks ini adalah hubungan yang kompleks antara Gross Domestic Product (GDP) dan Gross National Product (GNP). GDP dan GNP adalah indikator ekonomi penting yang digunakan untuk mengukur kesehatan ekonomi suatu negara, namun, dalam era globalisasi, keterkaitan antara keduanya menjadi semakin kabur. Artikel ini akan menggali lebih dalam mengenai hubungan antara GDP dan GNP, serta bagaimana transformasi ekonomi global telah memengaruhi cara kita memahami dan mengukur kesejahteraan ekonomi suatu negara dalam konteks yang semakin terhubung dan terintegrasi secara global.
-Metode Penelitian
+pendahuluan
+dalam era globalisasi yang semakin berkembang pesat  transformasi ekonomi global telah menjadi fokus utama perdebatan dan analisis  salah satu aspek yang menjadi perhatian utama dalam konteks ini adalah hubungan yang kompleks antara gross domestic product  gdp  dan gross national product  gnp   gdp dan gnp adalah indikator ekonomi penting yang digunakan untuk mengukur kesehatan ekonomi suatu negara  namun  dalam era globalisasi  keterkaitan antara keduanya menjadi semakin kabur  artikel ini akan menggali lebih dalam mengenai hubungan antara gdp dan gnp  serta bagaimana transformasi ekonomi global telah memengaruhi cara kita memahami dan mengukur kesejahteraan ekonomi suatu negara dalam konteks yang semakin terhubung dan terintegrasi secara global 
+metode penelitian

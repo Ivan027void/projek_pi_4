@@ -1,14 +1,14 @@
-**Pengantar:**
-System Development Life Cycle (SDLC) adalah serangkaian langkah dan proses yang digunakan dalam pengembangan sistem perangkat lunak. Alur SDLC membantu mengarahkan tim pengembang dalam merancang, mengembangkan, dan memelihara sistem perangkat lunak dengan efisiensi dan kualitas yang tinggi. Proses ini mencakup berbagai tahapan, mulai dari analisis kebutuhan hingga penerapan, pemeliharaan, dan penggantian sistem. Salah satu metode yang paling tua dan umum digunakan dalam SDLC adalah metode "Waterfall."
-**Alur System Development Life Cycle (SDLC):**
+  pengantar   
+system development life cycle  sdlc  adalah serangkaian langkah dan proses yang digunakan dalam pengembangan sistem perangkat lunak  alur sdlc membantu mengarahkan tim pengembang dalam merancang  mengembangkan  dan memelihara sistem perangkat lunak dengan efisiensi dan kualitas yang tinggi  proses ini mencakup berbagai tahapan  mulai dari analisis kebutuhan hingga penerapan  pemeliharaan  dan penggantian sistem  salah satu metode yang paling tua dan umum digunakan dalam sdlc adalah metode  waterfall  
+  alur system development life cycle  sdlc    
  
-1. **Pendefinisian Kebutuhan:** Tahap awal adalah mengidentifikasi masalah atau kesempatan bisnis dan merumuskan kebutuhan sistem. Tim analis bekerja sama dengan pengguna akhir untuk mengumpulkan persyaratan dan menentukan tujuan proyek.
+1    pendefinisian kebutuhan    tahap awal adalah mengidentifikasi masalah atau kesempatan bisnis dan merumuskan kebutuhan sistem  tim analis bekerja sama dengan pengguna akhir untuk mengumpulkan persyaratan dan menentukan tujuan proyek 
      
-2. **Perencanaan:** Pada tahap ini, anggaran dan jadwal proyek dibuat. Tim proyek menentukan sumber daya yang diperlukan, mengidentifikasi risiko, dan mengembangkan rencana proyek secara keseluruhan.
-3. **Desain Sistem:** Tim pengembang merancang arsitektur dan desain sistem perangkat lunak. Keputusan teknis dan arsitektur proyek dibuat dalam tahap ini.
-4. **Pengembangan:** Di tahap ini, kode sumber dibuat berdasarkan desain yang telah dibuat. Pekerjaan ini melibatkan para programmer dan developer.
-5. **Testing (Pengujian):** Setelah pengembangan selesai, perangkat lunak diuji untuk memastikan kualitasnya. Berbagai jenis pengujian termasuk uji fungsional, integrasi, dan pengujian performa dilakukan.
+2    perencanaan    pada tahap ini  anggaran dan jadwal proyek dibuat  tim proyek menentukan sumber daya yang diperlukan  mengidentifikasi risiko  dan mengembangkan rencana proyek secara keseluruhan 
+3    desain sistem    tim pengembang merancang arsitektur dan desain sistem perangkat lunak  keputusan teknis dan arsitektur proyek dibuat dalam tahap ini 
+4    pengembangan    di tahap ini  kode sumber dibuat berdasarkan desain yang telah dibuat  pekerjaan ini melibatkan para programmer dan developer 
+5    testing  pengujian     setelah pengembangan selesai  perangkat lunak diuji untuk memastikan kualitasnya  berbagai jenis pengujian termasuk uji fungsional  integrasi  dan pengujian performa dilakukan 
            
-6. **Implementasi:** Setelah pengujian berhasil, perangkat lunak dapat diimplementasikan dalam lingkungan produksi. Pengguna akhir dapat mulai menggunakan sistem yang telah dikembangkan.
-7. **Pemeliharaan:** Setelah sistem beroperasi, perawatan dan pemeliharaan perangkat lunak diperlukan untuk memastikan kinerja yang optimal dan mengatasi masalah yang mungkin muncul.
-8. **Penggantian:** Ketika sistem menjadi usang atau tidak dapat lagi memenuhi kebutuhan, tahap penggantian akan dimulai. Proses ini melibatkan pengembangan sistem baru atau migrasi ke sistem yang lebih modern.
+6    implementasi    setelah pengujian berhasil  perangkat lunak dapat diimplementasikan dalam lingkungan produksi  pengguna akhir dapat mulai menggunakan sistem yang telah dikembangkan 
+7    pemeliharaan    setelah sistem beroperasi  perawatan dan pemeliharaan perangkat lunak diperlukan untuk memastikan kinerja yang optimal dan mengatasi masalah yang mungkin muncul 
+8    penggantian    ketika sistem menjadi usang atau tidak dapat lagi memenuhi kebutuhan  tahap penggantian akan dimulai  proses ini melibatkan pengembangan sistem baru atau migrasi ke sistem yang lebih modern 

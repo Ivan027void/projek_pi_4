@@ -29,19 +29,30 @@ query = input("Masukkan kata yang ingin dicari: ")
 factory = StopWordRemoverFactory()
 stopword = factory.create_stop_word_remover()
 
-# Loop through each document and remove stopword
+# Create a stemming object
+stemmer = nltk.PorterStemmer()
+
+# Loop through each document and remove stopwords and stem the words
 clean_documents = []
 for document in documents:
     clean_document = stopword.remove(document)
-    clean_documents.append(clean_document)
+    stemmed_document = []
+    for word in clean_document.split():
+        stemmed_word = stemmer.stem(word)
+        stemmed_document.append(stemmed_word)
+    clean_documents.append(' '.join(stemmed_document))
 
+# Create a TF-IDF vectorizer
 vectorizer = TfidfVectorizer(use_idf=True, smooth_idf=True)
 
+# Calculate the TF-IDF vectors for the documents
 tfidf_matrix = vectorizer.fit_transform(clean_documents)
 features = vectorizer.get_feature_names_out()
 
+# Transform the query into a TF-IDF vector
 query_vector = vectorizer.transform([query])
 
+# Calculate the cosine similarity scores between the query vector and the document vectors
 cosine_scores = cosine_similarity(query_vector, tfidf_matrix)
 
 tokenized_query = nltk.word_tokenize(query)
@@ -77,34 +88,30 @@ cosine_indices = heapq.nlargest(n, range(len(cosine_scores[0])), cosine_scores[0
 # Get the indices of the highest scoring documents based on BM25 scores
 bm25_indices = heapq.nlargest(n, range(len(bm25_scores)), bm25_scores.__getitem__)
 
+# Print the ranked documents and the word positions based on cosine similarity
+print(f"Dokumen teratas untuk query '{query}' berdasarkan cosine similarity adalah:")
 for i in cosine_indices:
     print(f"Dokumen {i+1}:")
     print(f"Skor cosine similarity: {cosine_scores[0][i]}")
-    
     # Find the positions of the query words in the document
     positions = {}
     for word in tokenized_query:
         # Check if the word is in the word positions dictionary
         if word in word_positions:
-            # Check if the document index is in the word positions list for the current word
+            # Check if the document index is in the word positions list
             if i in word_positions[word]:
-                # Add the word and its positions to a dictionary
-                positions[word] = word_positions[word][i]
-    
+                # Add the word and its position to a dictionary
+                positions[word] = positions.get(word, []) + [i]
     # Sort the positions by value
     positions = {k: sorted(v) for k, v in positions.items()}
-    
     # Print the positions
     print(f"Posisi kata: {positions}")
-    
     # Add asterisks around the query words in the document
-    highlighted_document = documents[i]
-    for word, positions_list in positions.items():
-        for position in positions_list:
-            highlighted_document = highlighted_document[:position] + '*' + word + '*' + highlighted_document[position+len(word):]
-    
+    highlighted_document = re.sub(
+        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
     # Print the document
     print(f"Dokumen: {highlighted_document}")
+
 
 # Print a blank line to separate the results
 print()
