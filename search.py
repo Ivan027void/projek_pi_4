@@ -50,7 +50,18 @@ def find_word_index(word, documents, tfidf_vectorizer):
                 word_index.append((i, j))
     return word_index
 
-# Fungsi untuk menampilkan hasil pencarian
+def filter_documents(documents, word_indices):
+    filtered_documents = []
+    for i, j in word_indices:
+        filtered_documents.append(documents[i])
+    return filtered_documents
+
+def check_word_existence(document, word):
+    # Menggunakan nltk untuk melakukan tokenisasi kata pada dokumen
+    tokens = nltk.word_tokenize(document)
+    # Memeriksa apakah kata ada dalam dokumen
+    return word in tokens
+
 def display_search_results(sorted_documents,documents, word_index):
     # Menampilkan judul hasil pencarian
     print(f"Hasil pencarian untuk '{user_query}':")
@@ -61,8 +72,9 @@ def display_search_results(sorted_documents,documents, word_index):
         # Mendapatkan indeks kata dari list hasil pencarian
         word_indices = [j for i, j in word_index if i == index]
         # Menampilkan peringkat, nama dokumen, dan indeks kata dalam dokumen
-        print(f"Peringkat {rank}: {document_name}, Indeks Kata: {word_indices}")
-
+        if check_word_existence(documents[index], user_query):
+            print(f"Peringkat {rank}: {document_name}, Indeks Kata: {word_indices}")
+        
 # Membaca semua dokumen dalam direktori
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 documents = read_documents(dir)

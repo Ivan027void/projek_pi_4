@@ -1,13 +1,14 @@
 import os
 import glob
-import heapq
-import bisect
 import re
 import nltk
-from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 import numpy as np
-from rank_bm25 import BM25Okapi
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
+# Lokasi direktori dokumen
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 documents = []
 
@@ -20,60 +21,72 @@ for file in files:
         text = f.read()
         documents.append(text)
 
+# Input query dari pengguna
+query = input("Masukkan kata yang ingin dicari: ")
 
-# Create stopword remover object
+# Create a stopword remover object
 factory = StopWordRemoverFactory()
 stopword = factory.create_stop_word_remover()
 
-# Loop through each document and remove stopword
-clean_documents = []
-for document in documents:
-    clean_document = stopword.remove(document)
-    clean_documents.append(clean_document)
+# Create a stemming object
+stemmer = nltk.PorterStemmer()
 
-
-# Tokenize each document into words
-tokenized_documents = [nltk.word_tokenize(
-    document) for document in clean_documents]
-
-# Create BM25 object
-bm25 = BM25Okapi(tokenized_documents)
-
-# Get user input query
-query = input("Masukkan kata yang ingin dicari: ")
-
-# Tokenize query into words
+# Tokenize the query
 tokenized_query = nltk.word_tokenize(query)
 
-# Get BM25 scores for each document
-scores = bm25.get_scores(tokenized_query)
+# Remove stop words and stem the query words
+stemmed_query = []
+for word in tokenized_query:
+    if word not in stopword:
+        stemmed_query.append(stemmer.stem(word))
 
-# Get the number of documents to display
-n = int(input("Masukkan jumlah dokumen yang ingin ditampilkan: "))
+# Create a TF-IDF vectorizer
+vectorizer = TfidfVectorizer(use_idf=True, smooth_idf=True)
 
-# Get the indices of the highest scoring documents
-indices = heapq.nlargest(n, range(len(scores)), scores.__getitem__)
+# Calculate the TF-IDF vectors for the documents
+tfidf_matrix = vectorizer.fit_transform(documents)
+features = vectorizer.get_feature_names_out()
 
-# Print the ranked documents and the word indices
-print(f"Dokumen teratas untuk query '{query}' adalah:")
-for i in indices:
+# Create a query vector
+query_vector = vectorizer.transform([query])
+
+# Calculate the cosine similarity scores
+cosine_scores = cosine_similarity(query_vector, tfidf_matrix).flatten()
+
+# Sort the documents in descending order by cosine similarity score
+ranked_documents = np.argsort(cosine_scores)[::-1]
+
+# Find the positions of the query words in the documents
+word_positions = {}
+for word in stemmed_query:
+    word_positions[word] = []
+    for i, document in enumerate(documents):
+        if word in document:
+            word_positions[word].append(i)
+
+# Print the ranked documents and the word positions
+print(f"Dokumen teratas untuk query '{query}' berdasarkan cosine similarity adalah:")
+for i in ranked_documents[:10]:
     print(f"Dokumen {i+1}:")
-    print(f"Skor BM25: {scores[i]}")
+    print(f"Skor cosine similarity: {cosine_scores[0][i]}")
+
     # Find the positions of the query words in the document
     positions = {}
-    for word in tokenized_query:
-        # Use binary search to find the index of the word
-        index = bisect.bisect_left(tokenized_documents[i], word)
-        # Check if the word is in the document
-        if index < len(tokenized_documents[i]) and tokenized_documents[i][index] == word:
-            # Add the word and its position to a dictionary
-            positions[word] = positions.get(word, []) + [index]
+    for word in stemmed_query:
+        if word in word_positions:
+            if i in word_positions[word]:
+                positions[word] = positions.get(word, []) + [i]
+
     # Sort the positions by value
     positions = {k: sorted(v) for k, v in positions.items()}
+
     # Print the positions
     print(f"Posisi kata: {positions}")
+
     # Add asterisks around the query words in the document
     highlighted_document = re.sub(
-        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
+        r'\b(' + '|'.join(stemmed_query) + r')\b', r'*\1*', documents[i])
+
     # Print the document
     print(f"Dokumen: {highlighted_document}")
+    print()
