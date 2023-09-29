@@ -1,0 +1,17 @@
+
+apakah kalian pernah mendengar tentang chat gpt dan bing ai  jika belum  tenang saja  kali ini  kita akan membahas kedua platform tersebut secara mendalam  jadi  siapkan cangkir kopi dan mari kita mulai pertempuran ai terbesar di abad ini apa itu chat gpt 
+chat gpt adalah sebuah chatbot yang dikembangkan oleh openai  menggunakan model bahasa gpt 3 5 turbo  chat gpt mampu menghasilkan teks yang koheren dan relevan dengan input yang diberikan  
+ 
+dengan kata lain  chat gpt bisa menjawab pertanyaanmu  membantumu menulis artikel  atau bahkan membuat cerita pendek berdasarkan prompt yang kamu berikan kelebihan dan kelemahan chat gpt
+ baca juga  digital tools pengganti google translate yang wajib kamu coba  
+     
+chat gpt memiliki beberapa kelebihan  ia memiliki integrasi dan plugin yang kuat  chat gpt dapat berbicara dengan cara yang hampir mirip dengan manusia  ini berarti kamu bisa berbicara dengannya secara alami tanpa perlu mengubah cara penulisanmu 
+chat gpt memiliki akses ke informasi dari berbagai sumber di internet  ini membuatnya bisa menjawab pertanyaan yang beragam dan memberikan informasi yang relevan
+namun  chat gpt juga memiliki beberapa kelemahan  salah satunya adalah keterbatasan dalam melakukan pencarian web secara real time  
+meskipun kemampuannya bagus  chat gpt kadang kadang dapat bingung dengan konteks tertentu dan memberikan jawaban yang tidak sesuai 
+ baca juga  tantangan dalam menghadapi kehadiran internet bagi masyarakat indonesia  
+           
+selain itu  openai tidak terlalu transparan tentang bagaimana data mereka dikumpulkan dan bagaimana akurasi data tersebut diuji apa itu bing ai 
+bing ai adalah chatbot yang juga menggunakan model bahasa gpt  namun dalam versi yang berbeda dengan chat gpt  pada april 2023  bing ai menggunakan versi uji coba dari model gpt 4  
+ baca juga   narkoba  digital bernama gadget  
+selain itu  bing ai juga terintegrasi dengan aplikasi seperti edge dan skype kelebihan dan kelemahan bing ai

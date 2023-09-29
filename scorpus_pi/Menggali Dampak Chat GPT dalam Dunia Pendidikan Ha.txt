@@ -1,0 +1,14 @@
+dalam beberapa tahun terakhir  teknologi kecerdasan buatan telah mengalami perkembangan yang pesat  salah satu inovasi yang menonjol adalah chat gpt  generative pre trained transformer   
+chat gpt adalah model bahasa yang menggunakan kecerdasan buatan untuk menghasilkan teks yang menyerupai percakapan manusia  meskipun kemampuannya yang mengesankan  chat gpt juga memiliki dampak negatif dalam dunia pendidikan 
+1  ketidakmampuan kritis
+ 
+chat gpt menghasilkan teks berdasarkan data yang ada di internet  termasuk informasi yang tidak diverifikasi atau bahkan tidak akurat  dampak negatif lainnya adalah ketidakmampuan siswa dalam melakukan analisis kritis terhadap informasi yang mereka terima  
+     
+mereka mungkin mengandalkan chat gpt sebagai sumber tunggal untuk mencari jawaban tanpa mempertanyakan validitas atau keandalan informasi tersebut 
+mendidik siswa tentang keterampilan literasi digital menjadi sangat penting  mereka harus diajarkan cara mengidentifikasi sumber yang dapat dipercaya dan melakukan verifikasi informasi sebelum menggunakannya  
+pendidik juga dapat memberikan contoh nyata tentang dampak negatif yang dapat timbul akibat mengandalkan sepenuhnya pada chat gpt sebagai sumber informasi 
+2  kemerosotan keterampilan menulis
+           
+salah satu dampak negatif utama chat gpt dalam pendidikan adalah kemerosotan keterampilan menulis siswa  dengan kemampuan chat gpt untuk menghasilkan teks yang beragam dan kohesif  siswa mungkin menjadi tergantung pada teknologi ini untuk menyelesaikan tugas tugas menulis mereka  mereka mungkin mengabaikan pentingnya pengembangan kemampuan menulis yang sebenarnya  seperti pemahaman tata bahasa  gaya penulisan  dan kreativitas 
+penting bagi pendidik untuk mengingatkan siswa tentang pentingnya mengasah keterampilan menulis mereka secara mandiri  memperkenalkan tugas tugas menulis yang memerlukan pemikiran kritis  refleksi  dan kreativitas dapat membantu mengurangi ketergantungan pada chat gpt  pendekatan kolaboratif seperti penilaian berbasis proyek juga dapat meningkatkan kemampuan menulis siswa secara menyeluruh 
+3  keberlanjutan pembelajaran pasif
