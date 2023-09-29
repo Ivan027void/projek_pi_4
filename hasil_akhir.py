@@ -10,37 +10,41 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rank_bm25 import BM25Okapi
 
-dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
-documents = []
+# dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
+# documents = []
 
-# Get all txt files in the directory
-files = glob.glob(os.path.join(dir, '*.txt'))
+# # Get all txt files in the directory
+# files = glob.glob(os.path.join(dir, '*.txt'))
 
-# Loop through each file and read its content
-for file in files:
-    with open(file, 'r', encoding='utf-8') as f:
-        text = f.read()
-        documents.append(text)
+# # Loop through each file and read its content
+# for file in files:
+#     with open(file, 'r', encoding='utf-8') as f:
+#         text = f.read()
+#         documents.append(text)
+
+# # Create stopword remover object
+# factory = StopWordRemoverFactory()
+# stopword = factory.create_stop_word_remover()
+
+# # Create a stemming object
+# stemmer = nltk.PorterStemmer()
+
+# # Loop through each document and remove stopwords and stem the words
+# clean_documents = []
+# for document in documents:
+#     clean_document = stopword.remove(document)
+#     stemmed_document = []
+#     for word in clean_document.split():
+#         stemmed_word = stemmer.stem(word)
+#         stemmed_document.append(stemmed_word)
+#     clean_documents.append(' '.join(stemmed_document))
+
+import tokenisasi
+
+clean_documents = tokenisasi.clean_documents
 
 # Get user input query
 query = input("Masukkan kata yang ingin dicari: ")
-
-# Create stopword remover object
-factory = StopWordRemoverFactory()
-stopword = factory.create_stop_word_remover()
-
-# Create a stemming object
-stemmer = nltk.PorterStemmer()
-
-# Loop through each document and remove stopwords and stem the words
-clean_documents = []
-for document in documents:
-    clean_document = stopword.remove(document)
-    stemmed_document = []
-    for word in clean_document.split():
-        stemmed_word = stemmer.stem(word)
-        stemmed_document.append(stemmed_word)
-    clean_documents.append(' '.join(stemmed_document))
 
 # Create a TF-IDF vectorizer
 vectorizer = TfidfVectorizer(use_idf=True, smooth_idf=True)
@@ -108,7 +112,7 @@ for i in cosine_indices:
     # print(f"Posisi kata: {positions}")
     # Add asterisks around the query words in the document
     highlighted_document = re.sub(
-        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
+        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*',clean_documents[i])
     # Print the document
     print(f"Dokumen: {highlighted_document}")
 
@@ -136,6 +140,6 @@ for i in bm25_indices:
     # print(f"Posisi kata: {positions}")
     # Add asterisks around the query words in the document
     highlighted_document = re.sub(
-        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', documents[i])
+        r'\b(' + '|'.join(tokenized_query) + r')\b', r'*\1*', clean_documents[i])
     # Print the document
     print(f"Dokumen: {highlighted_document}")

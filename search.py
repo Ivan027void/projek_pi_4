@@ -73,7 +73,8 @@ def display_search_results(sorted_documents,documents, word_index):
         word_indices = [j for i, j in word_index if i == index]
         # Menampilkan peringkat, nama dokumen, dan indeks kata dalam dokumen
         if check_word_existence(documents[index], user_query):
-            print(f"Peringkat {rank}: {document_name}, Indeks Kata: {word_indices}")
+            print(f"Peringkat {rank}: {document_name}")
+            print(f"score cosine similarity:{score} ,Indeks Kata: {word_indices}")
         
 # Membaca semua dokumen dalam direktori
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
