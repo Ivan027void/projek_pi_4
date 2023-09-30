@@ -1,0 +1,14 @@
+manajemen risiko dan it governance telah menjadi faktor penting yang membantu bisnis dalam mengarungi revolusi digital dengan efektif di era di mana teknologi informasi  ti  telah meresap hampir setiap aspek bisnis dan kehidupan sehari hari  mari kita telusuri peran penting yang dimainkan oleh it governance dan manajemen risiko  serta bagaimana kedua hal tersebut saling terkait ketika menghadapi tantangan dan peluang era digital 
+era digital dan perubahan bisnis
+era digital telah mengubah cara bisnis dilakukan secara mendasar  organisasi saait ini semakin terdorong untuk melakuakan adaptasi dengan cepat terhadap kemajuan teknologi  dimana hal tersebut membentuk cara mereka beroperasi  berkomunikasi  dan bersaing  penggunaan teknologi informasi yang efektif dan efisien menjadi kunci keberhasilan bisnis kontemporer  namun  transformasi ini juga membuka organisasi terhadap risiko yang lebih tinggi 
+ 
+manfaat bisnis yang signifikan dapat diperoleh melalui inovasi dan efisiensi yang diberikan oleh teknologi informasi  ti   misalnya  perusahaan dapat menggunakan data untuk mengidentifikasi tren pasar  mengoptimalkan rantai pasokan  dan meningkatkan layanan pelanggan  selain itu  teknologi memungkinkan kolaborasi yang lebih baik dan fleksibilitas dalam bekerja 
+     
+namun  kemajuan ini juga membawa risiko  beberapa risiko umum yang terkait dengan penggunaan teknologi informasi  ti  meliputi 
+risiko keamanan siber  seiring dengan semakin kompleksnya serangan siber  organisasi harus menghadapi risiko seperti kebocoran data  peretasan  dan pencurian informasi rahasia 
+kegagalan sistem  ketika sebuah organisasi sangat bergantung pada ti  kegagalan sistem atau pemadaman dapat memiliki dampak serius pada operasi bisnis 
+ketidakpatuhan dengan persyaratan hukum  bisnis diwajibkan untuk patuh terhadap berbagai hukum  termasuk hipaa  health insurance portability and accountability act  di amerika serikat dan gdpr  general data protection regulation  di eropa  denda yang signifikan dapat diberlakukan jika melanggar batasan ini 
+           
+kerentanan infrastruktur ti  perangkat keras dan perangkat lunak yang sudah tua atau tidak terawat dapat menjadi risiko keamanan dan operasional 
+ketergantungan pada pihak ketiga  ketika organisasi bergantung pada penyedia layanan ti eksternal atau vendor  mereka dapat menjadi rentan jika vendor mengalami gangguan atau kebangkrutan 
+
