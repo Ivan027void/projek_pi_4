@@ -28,6 +28,7 @@ def read_documents(directory):
         if filename.endswith('.txt'):
             with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
                 document_text = file.read()
+                document_text = stopword_remover.remove(document_text)
                 documents.append(document_text)
     return documents
 
