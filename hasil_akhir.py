@@ -42,6 +42,8 @@ from rank_bm25 import BM25Okapi
 import tokenisasi
 
 clean_documents = tokenisasi.clean_documents
+# Get the document names
+document_names = [os.path.basename(file) for file in tokenisasi.files]
 
 # Get user input query
 query = input("Masukkan kata yang ingin dicari: ")
@@ -97,6 +99,7 @@ print(f"Dokumen teratas untuk query '{query}' berdasarkan cosine similarity adal
 for i in cosine_indices:
     print(f"Dokumen {i+1}:")
     print(f"Skor cosine similarity: {cosine_scores[0][i]}")
+    print(f"Nama Dokumen: {document_names[i]}")
     # Find the positions of the query words in the document
     # positions = {}
     # for word in tokenized_query:
@@ -125,6 +128,7 @@ print(f"Dokumen teratas untuk query '{query}' berdasarkan BM25 scores adalah:")
 for i in bm25_indices:
     print(f"Dokumen {i+1}:")
     print(f"Skor BM25: {bm25_scores[i]}")
+    print(f"Nama Dokumen: {document_names[i]}")
     # Find the positions of the query words in the document
     # positions = {}
     # for word in tokenized_query:
