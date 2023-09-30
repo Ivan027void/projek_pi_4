@@ -1,0 +1,9 @@
+
+untuk menjaga keamanan laptop pengguna bisa menggunakan atau mengaktifkan sensor sidik jari  tapi beberapa dari kita pasti masih ada yang kebingungan gimana cara biar sensor finger print kita bisa digunakan  hal ini mungkin cukup rumit bagi sebagian orang  tapi gausah khawatir  di sini saya bakal ngasih tips cara aktivasi sensor finger print pada laptop windows 11  berikut tata cara yang harus dilakukan  
+1  buka setting yang ada pada tombol start 2  masuk ke bagian account yang ada pada bagian kiri layar 3  kemudian akan muncul finger print recognition  langsung klik pada bagian tersebut 4  akan muncul textbox dengan tulisan set up dan bisa langusng di klik 5  ikuti semua perosedurnya  apabila belum set pin  maka akan diminta untuk membuat pin terlebih dahulu 6  jika semua prosedur telah dilaksanakan  maka tinggal klik done  maka sensor fingerprint sudah siap digunakan 
+ 
+jadi  itulah panduan singkat mengenai cara aktivasi sensor finger print pada laptop windows 11  bagi teman teman yang masih kebingungan  bisa cek versi video dibawah ini 
+     
+
+sekian tips yang bisa saya berikan  semoga bermanfaat 
+           
