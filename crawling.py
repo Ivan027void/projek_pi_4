@@ -4,13 +4,27 @@ from bs4 import BeautifulSoup
 def get_links(url):
   response = requests.get(url)
   soup = BeautifulSoup(response.content, 'html.parser')
-  links = soup.find_all('a')
+  links = soup.find_all('a', href=True)
+
   return links
 
-if __name__ == '__main__':
-  url = 'https://www.kompasiana.com/'
-  links = get_links(url)
+def main():
+  # Loop through the dates
+  for date in range(2020, 2024):
+    for month in range(1, 12):
+      for day in range(1, 31):
+        # Loop through the pages
+        for page in range(1, 31):
+          # Create the URL
+          url = 'https://www.kompasiana.com/indeks?page={}&category=&date={}-{}-{}'.format(page, date,month,day)
 
-  with open('links.txt', 'w') as f:
-    for link in links:
-      f.write(link['href'] + '\n')
+          # Get the links
+          links = get_links(url)
+
+          # Write the links to a file
+          with open('links.txt', 'a') as f:
+            for link in links:
+              f.write(link['href'] + '\n')
+
+if __name__ == '__main__':
+  main()
