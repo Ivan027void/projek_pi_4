@@ -10,8 +10,10 @@ def get_links(url):
 
 def main():
   # Loop through the dates
-  for date in range(2020, 2024):
-    for month in range(1, 12):
+  
+  month_list =['01','02','03','04','05','06','07','08','09','10','11','12']
+  for date in range(2020, 2021):
+    for month in month_list:
       for day in range(1, 31):
         # Loop through the pages
         for page in range(1, 31):
