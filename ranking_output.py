@@ -9,6 +9,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rank_bm25 import BM25Okapi
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # Create stopword remover object
 factory = StopWordRemoverFactory()

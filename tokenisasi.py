@@ -1,7 +1,7 @@
 import os
 import glob
-import nltk
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 documents = []
@@ -14,13 +14,12 @@ for file in files:
     with open(file, 'r', encoding='utf-8') as f:
         text = f.read()
         documents.append(text)
-        
+
 # Create stopword remover object
 factory = StopWordRemoverFactory()
 stopword = factory.create_stop_word_remover()
-
 # Create a stemming object
-stemmer = nltk.PorterStemmer()
+stemmer = StemmerFactory().create_stemmer()
 
 # Loop through each document and remove stopwords and stem the words
 clean_documents = []
@@ -47,7 +46,7 @@ with open('all_tokenized_words.txt', 'w', encoding='utf-8') as f:
     for tokenized_document in tokenized_clean_documents:
         # Write the tokenized words of the document to the output file
         f.write(' '.join(tokenized_document) + '\n')
-        
+
 def index_tokenized_words_in_document(tokenized_documents, output_file_path):
   """Indexes all tokenized words in the given documents and saves the index to a file.
 

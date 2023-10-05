@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import nltk
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 import os
 
 # nltk.download('punkt')
@@ -10,6 +11,8 @@ import os
 # Inisialisasi StopWordRemover dari Sastrawi
 stopword_factory = StopWordRemoverFactory()
 stopword_remover = stopword_factory.create_stop_word_remover()
+# Create a stemming object
+stemmer = StemmerFactory().create_stemmer()
 
 # Fungsi untuk membersihkan teks
 def preprocess_text(text):
@@ -19,6 +22,7 @@ def preprocess_text(text):
     text = text.lower()
     # Menghapus stop words menggunakan Sastrawi
     text = stopword_remover.remove(text)
+    text = stemmer.stem(text)
     return text
 
 # Fungsi untuk membaca semua dokumen dalam direktori
@@ -74,8 +78,11 @@ def display_search_results(sorted_documents,documents, word_index):
         word_indices = [j for i, j in word_index if i == index]
         # Menampilkan peringkat, nama dokumen, dan indeks kata dalam dokumen
         if check_word_existence(documents[index], user_query):
-            print(f"Peringkat {rank}: {document_name}")
-            print(f"score cosine similarity:{score} ,Indeks Kata: {word_indices}")
+            print(f"Peringkat {rank}: ")
+            print(f"nama: {document_name}")
+            print(f"score cosine similarity:{score}")
+            print(f"Indeks Kata: {word_indices} ")
+            print()
         
 # Membaca semua dokumen dalam direktori
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
