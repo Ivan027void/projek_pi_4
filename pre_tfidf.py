@@ -15,6 +15,8 @@ f.close()
 # Calculate the TF-IDF vectors for the documents
 tfidf_matrix = vectorizer.fit_transform(documents)
 
-# Save the TF-IDF vectors to a file
-with open('tfidf_matrix.npy', 'wb') as f:
-    np.save(f, tfidf_matrix)
+# Convert the TF-IDF matrix to a dense NumPy array
+tfidf_matrix_dense = tfidf_matrix.toarray()
+
+# Save the dense TF-IDF matrix to a NumPy binary file
+np.save('tfidf_matrix.npy', tfidf_matrix_dense)

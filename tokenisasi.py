@@ -13,13 +13,12 @@ stemmer = stemmer_factory.create_stemmer()
 # Direktori dokumen
 dir = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 documents = []
+document_names = []  # List to store document titles
 
 # Get all txt files in the directory
 files = glob.glob(os.path.join(dir, '*.txt'))
 
 # Fungsi untuk melakukan preprocessing pada dokumen
-
-
 def preprocess_document(document_text):
     # Hapus stopwords
     clean_document = stopword.remove(document_text)
@@ -42,6 +41,11 @@ for file in files:
         text = f.read()
         tokenized_clean_document = preprocess_document(text)
         tokenized_clean_documents.append(tokenized_clean_document)
+        
+        # Extract the document title from the filename and store it
+        document_title = os.path.basename(file)
+        document_names.append(document_title)
+
         print(
             f"Dokumen {len(tokenized_clean_documents)} berhasil di-token, dibersihkan, dan dipreprocessed")
 
@@ -55,33 +59,48 @@ with open('tokenized_documents.txt', 'w', encoding='utf-8') as f:
 # Close the file.
 f.close()
 
-
+# Save document names to a text file
+with open('document_names.txt', 'w', encoding='utf-8') as f:
+    for document_name in document_names:
+        f.write(document_name + '\n')
+        print(
+            f"document {document_name} save")
+        
+        
 def index_tokenized_words_in_document(tokenized_documents, output_file_path):
-    # Create a dictionary to store the word index.
-    word_index_dict = {}
+  """Indexes all tokenized words in the given documents and saves the index to a file.
 
-    # Iterate over the tokenized documents.
-    for document_index, tokenized_document in enumerate(tokenized_documents):
+  Args:
+    tokenized_documents: A list of lists of strings, where each sublist is a list of tokenized words in a document.
+    output_file_path: The path to the output file.
 
-        # Iterate over the tokenized words in the document.
-        for word_index, word in enumerate(tokenized_document):
+  Returns:
+    None.
+  """
+  # Create a dictionary to store the word index.
+  word_index_dict = {}
 
-            # If the word is not in the word index dictionary, add it.
-            if word not in word_index_dict:
-                word_index_dict[word] = []
+  # Iterate over the tokenized documents.
+  for document_index, tokenized_document in enumerate(tokenized_documents):
 
-            # Add the document index and word index to the word index dictionary.
-            word_index_dict[word].append((document_index+1, word_index))
+    # Iterate over the tokenized words in the document.
+    for word_index, word in enumerate(tokenized_document):
 
-        # Sort the word index list for the current word.
-        word_index_list = word_index_dict[word]
-        word_index_list.sort()
+      # If the word is not in the word index dictionary, add it.
+      if word not in word_index_dict:
+        word_index_dict[word] = []
 
-    # Save the word index to a file.
-    with open(output_file_path, 'w', encoding='utf-8') as f:
-        for word, document_index_and_word_index_list in word_index_dict.items():
-            f.write(f'{word}: {document_index_and_word_index_list}\n')
+      # Add the document index and word index to the word index dictionary.
+      word_index_dict[word].append((document_index+1, word_index))
 
+    # Sort the word index list for the current word.
+    word_index_list = word_index_dict[word]
+    word_index_list.sort()
+
+  # Save the word index to a file.
+  with open(output_file_path, 'w', encoding='utf-8') as f:
+    for word, document_index_and_word_index_list in word_index_dict.items():
+      f.write(f'{word}: {document_index_and_word_index_list}\n')
 
 # Index all tokenized words in the documents and save the index to a file.
 index_tokenized_words_in_document(tokenized_clean_documents, 'word_index_in_document_sorted.txt')
