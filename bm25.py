@@ -2,6 +2,7 @@ import math
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 import time
+import json
 
 class BM25:
     def __init__(self, tokenized_documents, k1=1.5, b=0.75):
@@ -84,6 +85,10 @@ if __name__ == "__main__":
     with open('document_names.txt', 'r', encoding='utf-8') as f:
         document_names = [line.strip() for line in f.readlines()]
     
+    # Load the URL to document info dictionary from the JSON file
+    with open('url_to_document.json', 'r', encoding='utf-8') as f:
+        url_to_document = json.load(f)
+        
     # Initialize Sastrawi stopword remover and stemmer
     stopword_factory = StopWordRemoverFactory()
     stemmer_factory = StemmerFactory()
@@ -97,7 +102,6 @@ if __name__ == "__main__":
     query = stopword_remover.remove(query)
     query = stemmer.stem(query)
     
-    
     start_time = time.time()
     # Search using BM25
     search_results = bm25.search(query)
@@ -106,9 +110,11 @@ if __name__ == "__main__":
     print("\nHasil Pencarian:")
     for rank, (doc_index, score) in enumerate(search_results, start=1):
         document_name = document_names[doc_index]
+        document_url = url_to_document[document_name]
         print(f"Rank: {rank}")
         print(f"Nama Dokumen: {document_name}")
         print(f"Skor: {score:.7f}\n")
+        print(f"Document URL: '{document_url}")
         
 end_time = time.time()
 
