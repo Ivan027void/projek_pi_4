@@ -83,7 +83,7 @@ if __name__ == "__main__":
     
     with open('document_names.txt', 'r', encoding='utf-8') as f:
         document_names = [line.strip() for line in f.readlines()]
-        
+    
     # Initialize Sastrawi stopword remover and stemmer
     stopword_factory = StopWordRemoverFactory()
     stemmer_factory = StemmerFactory()

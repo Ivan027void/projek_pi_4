@@ -1,32 +1,33 @@
 import requests
 from bs4 import BeautifulSoup
 
-def get_links(url):
-  response = requests.get(url)
-  soup = BeautifulSoup(response.content, 'html.parser')
-  links = soup.find_all('a', href=True)
+def get_urls(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
 
-  return links
+    links = []
+    for article in soup.find_all('h2', class_='title'):
+        link = article.find('a')['href']
+        links.append(link)
 
-def main():
-  # Loop through the dates
-  
-  month_list =['01','02','03','04','05','06','07','08','09','10','11','12']
-  for date in range(2020, 2021):
-    for month in month_list:
-      for day in range(1, 31):
-        # Loop through the pages
-        for page in range(1, 31):
-          # Create the URL
-          url = 'https://www.kompasiana.com/indeks?page={}&category=&date={}-{}-{}'.format(page, date,month,day)
+    return links
 
-          # Get the links
-          links = get_links(url)
-
-          # Write the links to a file
-          with open('links.txt', 'a') as f:
-            for link in links:
-              f.write(link['href'] + '\n')
+def save_urls(links):
+    with open('links.txt', 'a') as f:
+        for link in links:
+            f.write(link + '\n')
 
 if __name__ == '__main__':
-  main()
+    # Buat URL pencarian
+    year = 2021
+    for month in range(1, 12):
+        for day in range(1, 31):
+            date = '{}-{}-{}'.format(year, month, day)
+            url = 'https://www.kompasiana.com/indeks?page=1&category=&date={}-{}-{}'.format(date, month, day)
+
+            # Ambil semua URL
+            links = get_urls(url)
+
+            # Simpan URL ke file
+            save_urls(links)
+            print('links berhasil')

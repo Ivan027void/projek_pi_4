@@ -9,6 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from pre_tfidf import vectorizer
 import time
+import json
 
 # Create stopword remover object
 factory = StopWordRemoverFactory()
@@ -37,6 +38,10 @@ cosine_scores = cosine_similarity(query_vector, tfidf_matrix)
 with open('document_names.txt', 'r', encoding='utf-8') as f:
     document_names = [line.strip() for line in f.readlines()]
 
+# Load the URL to document info dictionary
+with open('url_to_document.json', 'r', encoding='utf-8') as f:
+    url_to_document = json.load(f)
+
 # Create a list to store the results with document titles, scores, and positions of query words
 results = []
 
@@ -56,22 +61,26 @@ for idx, score in enumerate(cosine_scores[0]):
             for match in nltk.re.finditer(query, document):
                 positions.append(match.start())
 
-        results.append((score, document_title, positions))
+        # Get the URL for the document
+        document_url = url_to_document[document_title]
+
+        results.append((score, document_title, positions, document_url))
 
 # Sort the results by cosine score in descending order
 results.sort(reverse=True)
+
 start_time = time.time()
-# Print the ranking with document titles, scores, and positions of query words
+
+# Print the ranking with document titles, scores, positions of query words, and URLs
 print("Dokumen teratas berdasarkan cosine similarity:")
-for rank, (score, document_title, positions) in enumerate(results, start=1):
+for rank, (score, document_title, positions, document_url) in enumerate(results, start=1):
     print(f"Rank: {rank}")
     print(f"Nama Dokumen: {document_title}")
     print(f"Skor Cosine Similarity: {score:.8f}")
     print(f"Posisi Index untuk Kata dalam Query: {positions}")
+    print(f"URL Dokumen: {document_url}")
     print()
-    
 
 end_time = time.time()
 
 print(f"Waktu eksekusi: {end_time - start_time:.2f} detik")
-
