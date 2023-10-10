@@ -113,8 +113,8 @@ if __name__ == "__main__":
         document_url = url_to_document[document_name]
         print(f"Rank: {rank}")
         print(f"Nama Dokumen: {document_name}")
-        print(f"Skor: {score:.7f}\n")
-        print(f"Document URL: '{document_url}")
+        print(f"Skor: {score:.7f}")
+        print(f"Document URL: '{document_url}\n")
         
 end_time = time.time()
 
