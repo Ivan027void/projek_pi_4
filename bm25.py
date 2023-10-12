@@ -69,7 +69,11 @@ class BM25:
             score = self._calculate_score(query_terms, doc_index)
             if score > 0:
                 relevant_documents.append((doc_index, score))
+                
+        if len(relevant_documents) > 150:
+            print(f"Terdapat lebih dari {len(relevant_documents)} dokumen yang ditemukan. Hanya akan ditampilkan 100 dokumen teratas.")
 
+        relevant_documents = relevant_documents[:100]
         relevant_documents.sort(key=lambda x: x[1], reverse=True)
         return relevant_documents
 
@@ -107,13 +111,13 @@ if __name__ == "__main__":
     search_results = bm25.search(query)
 
     # Display search results
-    print("\nHasil Pencarian:")
+    print("\nHasil Pencarian dari kata :")
     for rank, (doc_index, score) in enumerate(search_results, start=1):
         document_name = document_names[doc_index]
         document_url = url_to_document[document_name]
         print(f"Rank: {rank}")
         print(f"Nama Dokumen: {document_name}")
-        print(f"Skor: {score:.7f}")
+        print(f"Skor BM25: {score:.7f}")
         print(f"Document URL: '{document_url}\n")
         
 end_time = time.time()

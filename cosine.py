@@ -10,6 +10,7 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from pre_tfidf import vectorizer
 import time
 import json
+import re
 
 # Create stopword remover object
 factory = StopWordRemoverFactory()
@@ -27,6 +28,25 @@ query = input("Masukkan kata yang ingin dicari: ")
 query = stopword.remove(query)  # Menghapus stopwords dari query
 query_tokens = nltk.word_tokenize(query)  # Tokenisasi query
 query_tokens = [stemmer.stem(word) for word in query_tokens]  # Melakukan stemming pada query
+
+def find_positions(query, document):
+  # Pisahkan kueri menjadi token-token individual.
+  query_string = ' '.join(query)
+
+  # Temukan posisi semua kemunculan dari setiap token dalam dokumen.
+  positions = []
+  for token in query_string.split():
+      # Open the document and find all the positions where the query word appears
+        with open(os.path.join(scorpus_pi_path, document_title), 'r', encoding='utf-8') as f:
+            document = f.read()
+            positions.extend(re.finditer(token, document))
+
+  # Gabungkan posisi-posisi tersebut untuk mendapatkan posisi semua kemunculan dari kueri dalam dokumen.
+  merged_positions = []
+  for position in positions:
+    merged_positions.append(f'{position.start()}')
+
+  return merged_positions
 
 # Transform the query into a TF-IDF vector using the same vectorizer
 query_vector = vectorizer.transform([' '.join(query_tokens)])
@@ -51,16 +71,8 @@ scorpus_pi_path = 'C:/Users/ahini/Downloads/projek_pi_4/scorpus_pi/'
 for idx, score in enumerate(cosine_scores[0]):
     if score > 0:
         # If the cosine score is greater than 0, it means the document contains words from the query
-        document_title = document_names[idx]  # Get the real document title
-        positions = []
-
-        # Open the document and find all the positions where the query word appears
-        with open(os.path.join(scorpus_pi_path, document_title), 'r', encoding='utf-8') as f:
-            document = f.read()
-
-            for match in nltk.re.finditer(query, document):
-                positions.append(match.start())
-
+        document_title = document_names[idx]  # Get the real document title        
+        positions = find_positions(query_tokens, document_names[idx])
         # Get the URL for the document
         document_url = url_to_document[document_title]
 
@@ -69,10 +81,15 @@ for idx, score in enumerate(cosine_scores[0]):
 # Sort the results by cosine score in descending order
 results.sort(reverse=True)
 
+# Jika len(results) lebih dari 200, maka hanya tampilkan 100 dokumen teratas saja.
+if len(results) > 100:
+  print("\nDokumen ditemukan {} jadi hanya ditampilkan 100 dokumen teratas\n".format(len(results)))
+  results = results[:100]
+  
 start_time = time.time()
 
 # Print the ranking with document titles, scores, positions of query words, and URLs
-print("Dokumen teratas berdasarkan cosine similarity:")
+print(f"Dokumen teratas untuk pencarian '{query_tokens}' berdasarkan cosine similarity:")
 for rank, (score, document_title, positions, document_url) in enumerate(results, start=1):
     print(f"Rank: {rank}")
     print(f"Nama Dokumen: {document_title}")
@@ -83,4 +100,4 @@ for rank, (score, document_title, positions, document_url) in enumerate(results,
 
 end_time = time.time()
 
-print(f"Waktu eksekusi: {end_time - start_time:.2f} detik")
+print(f"Waktu eksekusi: {end_time - start_time:.8f} detik")
