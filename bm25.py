@@ -70,7 +70,7 @@ class BM25:
             if score > 0:
                 relevant_documents.append((doc_index, score))
                 
-        if len(relevant_documents) > 150:
+        if len(relevant_documents) > 100:
             print(f"Terdapat lebih dari {len(relevant_documents)} dokumen yang ditemukan. Hanya akan ditampilkan 100 dokumen teratas.")
 
         relevant_documents = relevant_documents[:100]
